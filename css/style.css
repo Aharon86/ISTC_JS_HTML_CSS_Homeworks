@@ -1,0 +1,29 @@
+body{
+    background-color: rgb(217, 235, 235); 
+}
+.clear{
+    clear: both;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container>h1{
+    text-align: center;
+}
+.container .quote{
+    width: 380px;
+    height: 540px;
+    margin: 10px;
+    float: left;
+}
+.container .quote>h3{
+    text-align: center;
+}
+.container .quote img{
+    width: 100%;
+}
+.container .quote>p{
+    text-align: justify;
+}
