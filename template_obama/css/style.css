@@ -17,24 +17,26 @@
     padding: 1.5%;
     font-family: Arial, Helvetica, sans-serif;
 }
-.container>.sectionTwo{
-    background-color: #00446A;
-    padding: 1.5%;
-}
-.sectionOne .secA{
+
+.sectionOne .secA, .sectionTwo .secA{
     width: 30%;
     min-width: 300px;
     background-color: #FFFFFF;
     text-align: center;
 }
-.sectionOne .secB{
+.sectionOne .secB, .sectionTwo .secB{
+    width: 65%;
+    background-color: white;
+    text-align: center;
+    padding-top: 10px;
     margin-left: 1.5%;
 }
-.sectionOne .secA, .sectionOne .secB{
+
+.sectionOne .secA, .sectionOne .secB, .sectionTwo .secA, .sectionTwo .secB{
     float: left;
     border-radius: 3px;
 }
-.secA h2{
+.sectionOne .secA h2{
     margin-top: 10px;
 }
 .secA h2+p{
@@ -115,12 +117,8 @@
     border-right: 1px solid #8797A6;
 }
 
-/* --------------------One B ----------------------------------*/
+/* --------------------SectionOne B ----------------------------------*/
 .sectionOne .secB{
-    width: 65%;
-    background-color: white;
-    text-align: center;
-    padding-top: 10px;
     border-top: 2px solid black;
     border-left: 2px solid black;
     border-right: 1px solid black;
@@ -129,7 +127,7 @@
     width: 100%;
     margin-top: 10px;
 }
-.secB p{
+.sectionOne .secB p{
     color: #444;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 14px;
@@ -139,7 +137,7 @@
 .secB form{
     padding: 16px;
 }
-.secB form input{
+.sectionOne .secB form input{
     height: 25px;
     border-radius: 3px;
     border: 1px solid #A7B6C7;
@@ -155,4 +153,86 @@
     background-color: #AE2D24;
     padding: 0 10px;
 }
-
+/* -------------------SectionTwo A -------------------------- */
+.container>.sectionTwo{
+    background-color: #00446A;
+    padding: 1.5%;
+}
+.sectionTwo .secA h2{
+    background-color: #004469;
+    text-align: left;
+    margin: 3px;
+}
+.sectionTwo .secA h2 img{
+    margin-left: 5px;
+    margin-top: 5px;
+}
+.sectionTwo .secA p, .sectionTwo .secB p{
+    color: #004160;
+    font-size: 22px;
+    font-weight: 700;
+    padding: 10px;
+    margin-top: 20px;
+}
+.sectionTwo form{
+    padding: 10px;
+}
+.sectionTwo form input{
+    height: 23px;
+    font-size: 11px;
+    border-radius: 4px;
+    border: 1px solid #A7B6C7;
+    box-shadow: 0 0 5px 1px #A7B6C7;
+    padding-left: 5px;
+    margin: 6px;
+}
+.sectionTwo form input:nth-child(1){
+    width: 220px;
+}
+.sectionTwo form input:nth-child(2){
+    width: 100px;
+}
+.sectionTwo input[type='submit']{
+    font-size: 13px;
+    color: white;
+    font-weight: 700;
+    height: 25px;
+    background-color: #AE2D24;
+    padding: 0 10px;
+}
+.sectionTwo .secA a, .sectionTwo .secB a{
+    color: #004160;
+    display: inline-block;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    margin: 20px;
+}
+.sectionTwo .secA .obamaBiden{
+    margin-top: 30px;
+}
+/* ------------------------SectionTwo B ----------------- */
+.sectionTwo .secB{
+    padding-top: 0;
+}
+.sectionTwo .secB h2{
+    background-color: #004469;
+    padding-top: 10px;
+    margin: 3px;
+}
+.sectionTwo .secB p{
+    font-size: 20px;
+}
+.sectionTwo .secB form input{
+    height: 20px;
+    font-size: 10px;
+}
+.sectionTwo .secB>img{
+    width: 95%;
+    margin-top: 5px;
+} 
+.sectionTwo .secB a{
+    font-size: 13px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    margin: 15px;
+}
