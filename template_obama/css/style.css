@@ -27,6 +27,7 @@
 .sectionOne .secB, .sectionTwo .secB{
     width: 67%;
     min-width: 300px;
+    min-height: 424px;
     background-color: white;
     text-align: center;
     padding-top: 10px;
@@ -239,10 +240,26 @@
 }
 /* --------------------------------media-------------------------------- */
 @media screen and (max-width: 1000px) {
+    .sectionOne .secB, .sectionTwo .secB{
+        float: right;
+        width: 60%;
+    }
+}
+@media screen and (max-width: 821px) {
+    .sectionOne .secB, .sectionTwo .secB{
+        width: 55%;
+    }
+}
+@media screen and (max-width: 728px) {
+    .sectionOne .secB, .sectionTwo .secB{
+        width: 50%;
+    }
+}
+@media screen and (max-width: 658px) {
     .sectionOne .secA, .sectionOne .secB, .sectionTwo .secA, .sectionTwo .secB{
         float: none;
         padding-top: 1px;
         padding-bottom: 1px;
         margin: 3px auto;
     }
-  }
+}
