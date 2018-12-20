@@ -3,6 +3,10 @@
     margin: 0;
     text-decoration: none;
 }
+@font-face{
+    font-family: font1;
+    src: url('../fonts/CoveredByYourGrace.ttf');
+}
 .clear{
     clear: both;
 }
@@ -17,7 +21,7 @@ html, body{
     margin: auto;
 }
 header{
-    padding: 0 3% 0;
+    padding: 0 4% 0;
 }
 .logo{
     float: left;
@@ -45,4 +49,50 @@ nav a{
 }
 nav a:hover{
     color:#00B1DB;
+}
+section{
+    color: white;
+    height: 60%;
+    background: url('../images/pc.jpg');
+    background-size: cover;
+    margin-top: 1%;
+    text-align: center;
+    padding: 5%;
+    background-blend-mode: darken;
+}
+section>p:nth-child(1){
+    margin-top: 5%;
+    font-size: 40px;
+    font-family: font1;
+}
+section>p:nth-child(2){
+    margin-top: 2%;
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    letter-spacing: 5px;
+}
+section>p:nth-child(3){
+    margin-top: 2%;
+    font-size: 25px;
+    font-family: font1;
+}
+section>p:nth-child(4) i{
+    font-size: 20px;
+    padding: 1%;
+    margin-top: 2%;
+}
+section>a{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    background: #00B1DB;
+    border-radius: 4px;
+    display: inline-block;
+    padding: 8px 20px;
+    margin-top: 2%;
+}
+section>a:hover{
+    box-shadow: 0px 0 15px 1px #00B1DB;
 }
