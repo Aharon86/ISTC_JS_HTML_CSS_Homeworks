@@ -9,26 +9,68 @@ html, body{
 }
 body{
     background-image: url('../images/LCz8H5.jpg');
+    background-size: cover;
 }
 form{
-    width: 40%;
-    height: 55%;
-    min-width: 400px;
-    min-height: 300px;
+    width: 48%;
+    height: 60%;
+    min-width: 435px;
+    min-height: 380px;
+    font-family: Arial, Helvetica, sans-serif;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 4px;
     box-shadow: 0 0 21px 4px #3F98AC, inset 0 0 22px 2px #3F98AC;
     border: 2px solid #3F98AC;
-    padding: 1.5%;
+    padding: 1%;
     margin: 10% auto;
 }
 form>p{
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 25px;
 }
-in
-.input_group>input:nth-child(odd){
+.icon{
+    padding-left: 6%;
+}
+input{
+    border-radius: 4px;
+    color: #878787;
+}
+input:not(.num), label{
+    margin-top: 4%;
+}
+form input:nth-child(odd){
     /* display: inline-block; */
-    margin-left: 2%;
+    margin-left: 2.5%;
+}
+input:not(.but){
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid #161616;
+    box-shadow: inset 1px 1px 7px 0px #161616;
+}
+input:not(.num), label{
+    width: 48.2%;
+    height: 12%;
+}
+.num{
+    width: 27%;
+    height: 70%;
+}
+label{
+    color: #878787;
+    font-size: 11px;
+    display: inline-block;
+    text-align: right;
+}
+input[type='submit']{
+    float: right;
+    margin-top: 5%;
+    width: 25%;
+    height: 9%;
+    color: #ff9185;
+    font-size: 17px;
+    font-weight: 600;
+    font-size: 14px;
+    background: rgba(220,119,108,0.5);
+    border: 2px solid #DC776C;
+    box-shadow: inset 0 0 16px 0px #ec3824, 0 0 16px 0px #ec3824;
 }
