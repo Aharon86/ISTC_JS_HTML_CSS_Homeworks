@@ -1,0 +1,74 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+}
+form{
+    width: 32%;
+    min-width: 350px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #2C2C2C;
+    border-radius: 10px;
+    text-align: center;
+    margin: 10% auto;
+}
+form>p{
+    font-size: 25px;
+    padding: 4%;
+    margin-bottom: 6%;
+    border-bottom: 1px solid #000;
+}
+form>input{
+    width: 92%;
+    height: 32px;
+    color: #000;
+    padding-left: 9%;
+    margin: 1.5% 4%;
+    border-radius: 18px;
+    border: 1px solid #444444;
+    box-shadow: 0 1px 0 #787878;
+}
+::placeholder{
+    color: #000;
+}
+form>label{
+    width: 92%;
+    font-size: 12px;
+    text-align: left;
+    display: inline-block;
+    margin: 2% 4%;
+}
+label>a{
+    color: #8f9e31;
+    text-shadow: 0 0 6px green;
+}
+form>button{
+    width: 46%;
+    height: 40px;
+    color: white;
+    font-size: 20px;
+    background-image: linear-gradient(to right bottom, #909520, #878d1c, #7e8519, #757d15, #6c7511);
+    border-radius: 15px;
+    box-shadow: inset 0 1px 0px 0px #BEC748;
+    border: 1px solid #4E5500;
+    margin-left: 46%;
+    margin-top: 1%;
+    margin-bottom: 5%;
+}
+form>input:nth-child(2){
+    background: url('../images/user-male-black-shape.png') no-repeat 1.5% center, linear-gradient(to bottom, #b1b1b1, #e4e4e4);
+}
+form>input:nth-child(3){
+    background: url('../images/telephone.png') no-repeat 1.5% center, linear-gradient(to bottom, #b1b1b1, #e4e4e4);
+}
+form>input:nth-child(4){
+    background: url('../images/close-envelope.png') no-repeat 1.5% center, linear-gradient(to bottom, #b1b1b1, #e4e4e4);
+}
+form>input:nth-child(5){
+    background: url('../images/padlock.png') no-repeat 1.5% center, linear-gradient(to bottom, #b1b1b1, #e4e4e4);
+}
