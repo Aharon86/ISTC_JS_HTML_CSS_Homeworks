@@ -25,6 +25,17 @@ form{
     margin: 10% auto;
     position: relative;
 }
+form::after{
+    content: '';
+    position: absolute;
+    z-index: -1; /* hide shadow behind image */
+    border-radius: 50%;
+    box-shadow: 0 20px 21px 0px rgba(0, 0, 0, 0.72);
+    width: 70%;
+    left: 15%;
+    height: 10px;
+    bottom: -65px;
+}
 form>p{
     color: white;
     font-size: 25px;
