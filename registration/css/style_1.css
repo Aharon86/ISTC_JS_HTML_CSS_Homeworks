@@ -10,10 +10,13 @@ html, body{
 body{
     background-image: url('../images/LCz8H5.jpg');
     background-size: cover;
+    display: flex;
 }
 form{
     width: 48%;
     height: 60%;
+    max-width: 620px;
+    max-height: 420px;
     min-width: 435px;
     min-height: 380px;
     font-family: Arial, Helvetica, sans-serif;
@@ -22,8 +25,10 @@ form{
     box-shadow: 0 0 21px 4px #3F98AC, inset 0 0 22px 2px #3F98AC;
     border: 2px solid #3F98AC;
     padding: 1%;
-    margin: 10% auto;
+    margin: auto;
     position: relative;
+    display: flex;
+    justify-content: space-around;
 }
 form::after{
     content: '';
@@ -46,6 +51,7 @@ form>p{
 input{
     border-radius: 4px;
     color: #878787;
+
 }
 input:not(.num), label{
     margin-top: 4%;
@@ -117,7 +123,7 @@ div{
     padding: 7px;
     line-height: 14px;
     position: absolute;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgb(0, 0, 0, 0.6);
     border-radius: 100%;
     top: -14px;
     right: -14px;
