@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+div{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 50%;
+    left: 50%;
+    transform: rotate(60deg);
+    transform-style: preserve-3d;
+    animation: rot 6s linear infinite;
+}
+span{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.s1{
+    background: red;
+    height: 120px;
+    transform-style: preserve-3d;
+    /* transform: rotateY(50deg); */
+   
+}
+.s2{
+    background: fuchsia;
+    top: -5px;
+    /* transform: rotateY(-50deg); */
+    height: 100px;
+}
+@keyframes rot{
+    0%{
+        transform:rotateZ(60deg) rotateY(0deg);
+    }
+    100%{
+        transform:rotateZ(60deg) rotateY(359deg);
+    }
+}

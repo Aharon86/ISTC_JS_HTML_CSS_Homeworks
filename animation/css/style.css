@@ -11,7 +11,8 @@ div{
 }
 .container{
     /* background: red; */
-    transform: rotateX(60deg);
+    transform: perspective(1000px) rotateX(60deg);
+    transform-style: preserve-3d;
     /* animation: oval 4s linear infinite; */
 }
 .section{
@@ -41,6 +42,6 @@ div{
     100%{transform: rotate(360deg)}
 }
 @keyframes oval{
-    0%{transform: rotateX(0)}
-    100%{transform: rotateX(360deg)}
+    0%{transform:perspective(1000px) rotateX(0deg);}
+    100%{transform:perspective(1000px) rotateX(359deg);}
 }
