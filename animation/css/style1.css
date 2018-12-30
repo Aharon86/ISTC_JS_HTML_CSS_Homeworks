@@ -23,13 +23,13 @@ span{
     background: red;
     height: 120px;
     transform-style: preserve-3d;
-    /* transform: rotateY(50deg); */
+    transform: rotateY(50deg);
    
 }
 .s2{
     background: fuchsia;
     top: -5px;
-    /* transform: rotateY(-50deg); */
+    transform: rotateY(-50deg);
     height: 100px;
 }
 @keyframes rot{
