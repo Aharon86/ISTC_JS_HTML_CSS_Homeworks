@@ -28,6 +28,9 @@ header{
     align-items: center;
     padding: 2%;
 }
+.logo-toggle{
+    display: flex;
+}
 .logo{
     width: 45px;
     height: 45px;
@@ -38,8 +41,12 @@ header{
     background: white;
     border-radius: 50%;
 }
+#toggle{
+    display: none;
+}
 nav{
     width: 60%;
+    display: block;
 }
 nav>ul{
     display: flex;
@@ -125,6 +132,8 @@ nav ul a:hover{
 .section>.item{
     width: 25%;
     text-align: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
     /* text-align: center; */
     /* display: flex;
     flex-direction: column;
@@ -224,7 +233,7 @@ form>input:nth-child(2){
         margin-bottom: 3%;
     }
   }
-  @media only screen and (max-width: 560px) {
+  @media only screen and (max-width: 610px) {
     nav>ul{
         justify-content: center;
     }
@@ -242,14 +251,48 @@ form>input:nth-child(2){
         width: 100%;
     }
   }
-  @media only screen and (max-width: 476px) {
+  @media screen and (max-width: 476px) {
+    .logo-toggle{
+        width: 100%;
+        padding-left: 2%;
+        padding-right: 2%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #toggle{
+        display: block;
+        width: 32px;
+        height: 32px;
+        background: url('../images/toggle.png');
+        background-size: cover;
+        transition: all 0.5s linear;
+        transform: rotateZ(0); 
+    }
+    nav{
+        
+        /* height: 0; */
+        /* transition: all 0.5s linear; */
+    }
+    .navigation{
+        display: none;
+    }
     nav>ul{
         flex-direction: column;
         align-items: center;
+    }
+    nav>ul>li{
+        width: 100%;
+    }
+    nav>ul>li>a{
+        text-align: center;
+        width: 100%;
     }
     footer>ul{
         flex-direction: column;
         align-items: center;
     }
   }
+
+
   
