@@ -3,6 +3,7 @@ var nav = document.getElementsByTagName('nav')[0];
 
 toggle.addEventListener('click', menu);
 // window.addEventListener('resize', windowResize);
+// window.addEventListener('click', menu);
 
 
 function menu() {
