@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h2>The XMLHttpRequest Object</h2>
+
+    <p id="demo">Let AJAX change this text.</p>
+
+    <button type="button" onclick="loadDoc()">Change Content</button>
+    <ul>
+        <li></li>
+    </ul>
+
+    <script>
+        function loadDoc() {
+            var arr = [];
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    var data = JSON.parse(this.responseText);
+                    arr.push(data);
+                    console.log(data);
+                    var ul = document.querySelector('ul');
+                    arr.map((item,index) => {
+                        return document.getElementById('demo').innerHTML = item.title;
+                    
+                    })
+                // document.getElementById("demo").innerHTML = this.responseText;
+                }
+            };
+            xhttp.open("GET", "https://jsonplaceholder.typicode.com/todos/1", true);
+            xhttp.send();
+        }
+    </script>
+
+</body>
+</html>
