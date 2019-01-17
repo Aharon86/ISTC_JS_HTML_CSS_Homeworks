@@ -8,12 +8,54 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Registration form -->
+    
     <section>
-        <form action="" method="">
-            <input type="text" name="name">
-        </form>
+        <!-- Registration form -->
+        <div id="form1" class="form">
+            <label>Name
+                <input type="text" name="name">
+            </label>
+            <label>Surname
+                <input type="text" name="surname">
+            </label>
+            <fieldset>
+                <legend>Gender</legend>
+                <label>Male
+                    <input type="radio" name="gender" class="gender" value="male">
+                </label>
+                <label>Female
+                    <input type="radio" name="gender" class="gender" value="female">
+                </label>
+            </fieldset>
+            <label>Birthday date
+                <input type="date" name="birthday_date">
+            </label>
+            <label>Email
+                <input type="email" name="email">
+            </label>
+            <label>Password
+                <input type="password" name="password">
+            </label>
+            <label>Password confirm
+                <input type="password" name="confirm_password">
+            </label>
+            <button class="but registration">Registration</button>
+        </div>
+
+        <!-- Sign in form -->
+        <div id="form2" class="form">
+            
+            <label>Email
+                <input type="email" name="email">
+            </label>
+            <label>Password
+                <input type="password" name="password">
+            </label>
+            <button class="but signin">Sign In</button>
+        </div>
     </section>
+
+    <div id="test"></div>
     <script src="js/script.js"></script>
 </body>
 </html>

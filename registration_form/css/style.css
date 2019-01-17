@@ -8,3 +8,54 @@ html, body{
     height: 100%;
 }
 /* set style 'input' elements */
+body{
+    background: url('../image/pattern-background-png-15.jpg') no-repeat fixed;
+    background-size: cover;
+}
+
+section{
+    width: 100%;
+    /* height: 50%; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.form{
+    background: rgba(0, 0, 0, 0.7);
+    width: 30%;
+    min-width: 400px;
+    padding: 1% 2%;
+    /* text-align: center; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+}
+label, fieldset{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+input:not(#but):not(.gender), fieldset{
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.7);
+}
+input:not(.but):not(.gender){
+    height: 30px;
+    background: rgba(255, 255, 255, 0.6);
+}
+label, fieldset, .but{
+    margin-top: 10px;
+}
+fieldset{
+    padding: 2%;
+}
+.but{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.7);
+}
