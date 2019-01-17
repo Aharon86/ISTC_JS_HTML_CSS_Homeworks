@@ -59,3 +59,21 @@ fieldset{
     border-radius: 5px;
     border: 1px solid rgba(0, 0, 0, 0.7);
 }
+#test{
+    font-size: 30px;
+    font-weight: 700;
+}
+
+@media only screen and (max-width: 400px) {
+    section{
+        display: flex;
+        flex-direction: column;
+        /* justify-content: space-around;
+        align-items: center; */
+    }
+    .form{
+        width: 100%;
+        min-width: 350px;
+        margin-bottom: 5%;
+    }
+  }
