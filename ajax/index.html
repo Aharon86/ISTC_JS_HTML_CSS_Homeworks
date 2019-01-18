@@ -26,10 +26,10 @@
                     arr.push(data);
                     console.log(data);
                     var ul = document.querySelector('ul');
-                    arr.map((item,index) => {
-                        return document.getElementById('demo').innerHTML = item.title;
+                    // arr.map((item,index) => {
+                        document.getElementById('demo').innerHTML = arr[0].title;
                     
-                    })
+                    // })
                 // document.getElementById("demo").innerHTML = this.responseText;
                 }
             };
