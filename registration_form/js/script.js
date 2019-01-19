@@ -11,19 +11,31 @@ function getValue() {
         "title": form1[4].value, 
         "body": form1[5].value
     };
-    var objSend = JSON.stringify(obj);
-    var xhttp = new XMLHttpRequest();
+    // var objSend = JSON.stringify(obj);
+    // var xhttp = new XMLHttpRequest();
 
-    xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            var data = JSON.parse(this.responseText);
-            console.log(data);
+    // xhttp.onreadystatechange = function() {
+    //     if (this.readyState == 4 && this.status == 200) {
+    //         var data = JSON.parse(this.responseText);
+    //         console.log(data);
             
+    //     }
+    // };
+    // xhttp.open("POST", "http://rest.learncode.academy/api/johnbob/friends", true);
+    // xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    // xhttp.send(objSend);
+
+    // --------------------------
+    fetch("http://rest.learncode.academy/api/johnbob/friends", {
+        method: 'POST', // or 'PUT'
+        body: JSON.stringify(obj), // data can be `string` or {object}!
+        headers:{
+          'Content-Type': 'application/json'
         }
-    };
-    xhttp.open("POST", "http://rest.learncode.academy/api/learncode/friends", true);
-    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xhttp.send(objSend);
+      })
+      .then(res => res.json())
+      .then(response => console.log('Success:', response))
+      .catch(error => console.error('Error:', error));
 
 // ---------------------------------------------
     // for (let i = 0; i < form1.length; i++) {
