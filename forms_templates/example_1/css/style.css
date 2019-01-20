@@ -1,0 +1,112 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+}
+/* element styles */
+body{
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: linear-gradient(to bottom right, #2AF599, #009DFC);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 50%;
+    height: 70%;
+    min-width: 750px;
+    min-height: 500px;
+    background: #009DFC;
+    border-radius: 7px;
+    display: flex;
+    overflow: hidden;
+}
+.item_1, .item_2{
+    width: 50%;
+    height: 100%;
+}
+.item_1{
+    background: url('../image/item.JPG') no-repeat;
+    background-size: cover;
+}
+.item_2{
+    background: #3D5981;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+/* style buttons */
+.sign{
+    color: #98A2BB;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+}
+.sign>*{
+    width: 50%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 3px solid #5B779F;
+}
+.sign_up{
+    color: white;
+    font-weight: 700;
+    border-bottom: 3px solid #4BD2D8;
+}
+/* style form window */
+.form_section{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+#form_1, #form_2{
+    background: #3D5981;
+    width: 100%;
+    height: calc(100% - 60px);
+    padding: 9% 10%;
+    position: absolute;
+}
+#form_1>label, #form_2>label{
+    display: block;
+}
+#form_1>label>input, #form_2>label>input{
+    color: white;
+    width: 100%;
+    height: 30px;
+    border: none;
+    border-bottom: 2px solid #48648C;
+    background: transparent;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+#form_1>label>span, #form_2>label>span{
+    width: 100%;
+    height: 20px;
+    color: red;
+    font-size: 14px;
+    padding-left: 2%;
+    display: inline-block;
+}
+#form_1>label>input:focus, #form_2>label>input:focus {
+    outline: none;
+}
+::placeholder{
+    color: wheat;
+}
+button{
+    font-weight: 700;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 30px;
+}
+#form_1{
+    z-index: 2;
+}
+#form_2{
+    z-index: 1;
+}
