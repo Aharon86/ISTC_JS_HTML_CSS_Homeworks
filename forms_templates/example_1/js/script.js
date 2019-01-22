@@ -75,8 +75,8 @@ function validatorInput(event, inpOut) {
     } else {
         setWrong(inp);
     }
-    console.log(regExp[inp.name].test(inp.value));
-    console.log(myValue );
+    // console.log(regExp[inp.name].test(inp.value));
+    // console.log(myValue );
 }
 // validation style and get any values
 function setCorrect(inp) {
@@ -121,7 +121,7 @@ function sendObj() {
       .then(response => writeData(response))
       .catch(error => console.error('Error:', error));
 }
-
+// write response data
 function writeData(data) {
     for (var key in data) {
         var tr = document.createElement('tr');
