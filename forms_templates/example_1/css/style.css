@@ -53,10 +53,15 @@ body{
     align-items: center;
     border-bottom: 3px solid #5B779F;
 }
-.sign_up{
+.active{
     color: white;
     font-weight: 700;
     border-bottom: 3px solid #4BD2D8;
+}
+.not_active{
+    color: #98A2BB;
+    font-weight: 100;
+    border-bottom: 3px solid #5B779F;
 }
 /* style form window */
 .form_section{
