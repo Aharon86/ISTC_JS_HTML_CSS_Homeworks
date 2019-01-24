@@ -85,6 +85,10 @@ function setWrong(inp) {
     myValue[inp.name] = inp.value;
     inp.nextElementSibling.innerHTML = validInput[inp.name].err;
 }
+function clearValueStyle(inp) {
+    inp.removeAttribute("style");
+    inp.value = '';
+}
 
 // The last check, sending data and receiving from the server
 
@@ -100,6 +104,10 @@ function sendObj() {
         if (!validInput[key].valid) {
             return;
         }
+    }
+    // if all values are correct return standard styles
+    for (var key in validInput) {
+        clearValueStyle(document.getElementById(key).getElementsByTagName('input')[0]);
     }
 
     fetch("http://rest.learncode.academy/api/johnbob/friends", {
