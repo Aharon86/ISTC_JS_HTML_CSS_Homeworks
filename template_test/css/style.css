@@ -8,7 +8,7 @@
 }
 html, body{
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
 }
 body{
     display: flex; 
@@ -16,10 +16,10 @@ body{
 }
 #container{
    width: 80%;
-   height: 100%;
+   /* height: 100%; */
 }
 header{
-    height: 40%;
+    /* height: 26vw; */
     background: url('../image/slide1.jpg');
     background-size: cover;
     display: flex;
@@ -33,14 +33,16 @@ header{
     justify-content: center;
 }
 .social>*{
-    display: inline-block;
+    font-size: 2vw;
     background: white;
-    width: 30px;
-    height: 30px;
-    padding: 9px;
+    width: 4vw;
+    height: 4vw;
     margin-right: 5px;
     margin-left: 5px;
     border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 nav{
     display: flex;
@@ -55,6 +57,11 @@ nav>.logo{
     height: 4vw;
     background-image: url('../image/logo.png');
     background-size: cover;
+}
+nav>h3{
+    font-size: 2.5vw;
+    color: red;
+    margin-left: 1.5vw;
 }
 nav>.menu{
     height: 100%;
@@ -72,7 +79,7 @@ nav>.menu>li{
 }
 nav>.menu a{
     display: inline-block;
-    padding: 10px 10px;
+    padding: 0.5vw 1vw;
     color: #555;
     font-size: 1.2vw;
 }
@@ -81,4 +88,242 @@ li:hover a{
 }
 .menu li:hover{
    border-top: 2px solid orange; 
+}
+header>h2{
+    color: white;
+    font-size: 2.5vw;
+    border-bottom: 2px solid white;
+    margin-top: 5vw;
+}
+header>p{
+    font-size: 1.2vw;
+    color: white;
+    margin-top: 1vw;
+}
+header>button{
+    font-size: 1vw;
+    color: white;
+    background: red;
+    padding: 0.8vw 1vw;
+    border: none;
+    border-radius: 8%;
+    margin-top: 1vw;
+    margin-bottom: 2vw;
+}
+/* ----------------- */
+section, article{
+    /* height: 500px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2vw;
+    padding-top: 1vw;
+}
+section>h3, article>h3{
+    border-bottom: 1px solid black;
+}
+section>p, article>p{
+    color: #555;
+    font-size: 1.4vw;
+    margin-top: 1vw;
+}
+/* --------------- */
+section>.items{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5vw;
+    padding-bottom: 1vw;
+}
+section>.items>*{
+    font-size: 2vw;
+    width: 13vw;
+    height: 13vw;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section>.items>*:nth-child(1){
+    background: #1BBC9A;
+}
+section>.items>*:nth-child(2){
+    background: #E67F22;
+}
+section>.items>*:nth-child(3){
+    background: #3598DB;
+}
+section>.items>*:nth-child(4){
+    background: #2BC36D;
+}
+/* -------------article------------ */
+article>.portfolio>div{
+    width: 13vw;
+    height: 13vw;
+    background-size: cover;
+}
+article>.portfolio{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 1.5vw;
+    padding-bottom: 1vw;
+}
+article>.portfolio>div{
+    margin-bottom: 1vw;
+}
+
+@media only screen and (max-width: 800px) {
+    .social>*{
+        font-size: 2.5vw;
+        width: 5vw;
+        height: 5vw;
+    }
+    nav{
+        height: 6vw;
+    }
+    nav>.logo{
+        width: 6vw;
+        height: 6vw;
+    }
+    nav>.menu a{
+        font-size: 2vw;
+    }
+    header>h2{
+        font-size: 3.5vw;
+        margin-top: 5.5vw;
+    }
+    header>p{
+        font-size: 2vw;
+        margin-top: 1.5vw;
+    }
+    header>button{
+        font-size: 2vw;
+        padding: 1vw 1.5vw;
+        margin-top: 1.5vw;
+        margin-bottom: 2vw;
+    }
+
+
+    section>p, article>p{
+        font-size: 2vw;
+    }
+    #container{
+        width: 100%;
+    }
+    section>.items>*{
+        font-size: 3vw;
+        width: 16vw;
+        height: 16vw;
+    }
+    article>.portfolio>div{
+        width: 16vw;
+        height: 16vw;
+        margin-bottom: 2vw;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .social>*{
+        font-size: 3vw;
+        width: 5.5vw;
+        height: 5.5vw;
+    }
+    nav{
+        height: 6vw;
+    }
+    nav>.logo{
+        width: 6vw;
+        height: 6vw;
+    }
+    nav>h3{
+        font-size: 3.3vw;
+    }
+    nav>.menu a{
+        font-size: 2vw;
+    }
+    header>h2{
+        font-size: 4vw;
+        margin-top: 5.5vw;
+    }
+    header>p{
+        font-size: 2.5vw;
+        margin-top: 1.5vw;
+    }
+    header>button{
+        font-size: 2.5vw;
+        margin-top: 1.5vw;
+        margin-bottom: 2vw;
+    }
+
+
+    section>p, article>p{
+        font-size: 2.5vw;
+        margin-bottom: 2vw;
+    }
+    section>.items{
+        flex-wrap: wrap;
+    }
+    section>.items>*{
+        font-size: 4vw;
+        width: 32vw;
+        height: 32vw;
+        margin-bottom: 3vw;
+    }
+    article>.portfolio>div{
+        width: 32vw;
+        height: 32vw;
+        margin-bottom: 3vw;
+    }
+}
+@media only screen and (max-width: 380px) {
+    .social>*{
+        font-size: 4.5vw;
+        width: 8vw;
+        height: 8vw;
+    }
+    nav{
+        height: 9vw;
+    }
+    nav>.logo{
+        width: 9vw;
+        height: 9vw;
+    }
+    nav>h3{
+        font-size: 6vw;
+    }
+    nav>.menu{
+        display: none;
+    }
+    header>h2{
+        font-size: 5.5vw;
+        margin-top: 5.5vw;
+    }
+    header>p{
+        font-size: 2.5vw;
+        margin-top: 1.5vw;
+    }
+    header>button{
+        font-size: 2.5vw;
+        margin-top: 1.5vw;
+        margin-bottom: 2vw;
+    }
+    section>p, article>p{
+        font-size: 3vw;
+    }
+    section>.items{
+        flex-wrap: wrap;
+    }
+    section>.items>*{
+        font-size: 6vw;
+        width: 64vw;
+        height: 64vw;
+        margin-bottom: 3vw;
+    }
+    article>.portfolio>div{
+        width: 64vw;
+        height: 64vw;
+        margin-bottom: 3vw;
+    }
 }

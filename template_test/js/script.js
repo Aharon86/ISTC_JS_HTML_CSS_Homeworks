@@ -71,3 +71,63 @@ header.appendChild(p);
 var but = document.createElement('button');
 but.appendChild(document.createTextNode('RESPONSIVE TEMPLATE'));
 header.appendChild(but);
+
+// ---------------SECTION----------
+var section = document.createElement('section');
+con.appendChild(section);
+
+var h3 = document.createElement('h3');
+h3.appendChild(document.createTextNode('OUR SERVICES'));
+section.appendChild(h3);
+
+var p = document.createElement('p');
+p.appendChild(document.createTextNode('LET US HELP YOU TO CREATE PROFESSIONAL WEBSITES'));
+section.appendChild(p);
+
+var items = document.createElement('div');
+items.className = 'items';
+var arrItems = [
+        'far fa-file-code',
+        'far fa-paper-plane',
+        'fas fa-landmark',
+        'fas fa-flask'
+    ];
+for (let key in arrItems) {
+    let div = document.createElement('div');
+    let iT = document.createElement('i');
+    iT.className = arrItems[key];
+    div.appendChild(iT);
+    items.appendChild(div);
+}
+section.appendChild(items);
+
+// -------------------article------------
+var article = document.createElement('article');
+con.appendChild(article);
+
+var h3 = document.createElement('h3');
+h3.appendChild(document.createTextNode('OUR PORTFOLIO'));
+article.appendChild(h3);
+
+var p = document.createElement('p');
+p.appendChild(document.createTextNode('WHAT WE HAVE DONE SO FAR'));
+article.appendChild(p);
+
+var div = document.createElement('div');
+div.classList.add('portfolio');
+article.appendChild(div);
+var arrImg = [
+        'image/p1.jpg',
+        'image/p2.jpg',
+        'image/p3.jpg',
+        'image/p4.jpg',
+        'image/p5.jpg',
+        'image/p6.jpg',
+        'image/p7.jpg',
+        'image/p8.jpg'
+    ];
+for (let i = 0; i < arrImg.length; i++) {
+    let img = document.createElement('div');
+    img.style.backgroundImage = "url(" + arrImg[i] + ")";
+    document.getElementsByClassName('portfolio')[0].appendChild(img);
+}
