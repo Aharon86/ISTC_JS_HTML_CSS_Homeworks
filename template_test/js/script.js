@@ -33,8 +33,12 @@ for (let i = 0; i < classFonts.length; i++) {
 /* create navigation block*/
 header.appendChild(nav);
 var logo = document.createElement('DIV');
+var inLogo = document.createElement('DIV');
+inLogo.className = 'inLogo';
+logo.appendChild(inLogo);
 logo.classList.add('logo');
 nav.appendChild(logo);
+
 var h3 = document.createElement('h3');
 h3.appendChild(document.createTextNode('FLEX'));
 nav.appendChild(h3);
@@ -131,3 +135,17 @@ for (let i = 0; i < arrImg.length; i++) {
     img.style.backgroundImage = "url(" + arrImg[i] + ")";
     document.getElementsByClassName('portfolio')[0].appendChild(img);
 }
+
+var ul = document.getElementsByTagName('ul')[0];
+document.getElementsByClassName('inLogo')[0].addEventListener('click', () => {
+    ul.classList.toggle('drop_down');
+});
+
+window.addEventListener('click', closeMenu);
+
+function closeMenu(event) {
+    if(ul.classList.contains('drop_down') && event.target.className != 'inLogo'){
+        ul.classList.remove('drop_down');
+    }
+}
+

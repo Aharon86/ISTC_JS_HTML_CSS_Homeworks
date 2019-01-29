@@ -58,35 +58,38 @@ nav>.logo{
     background-image: url('../image/logo.png');
     background-size: cover;
 }
+nav>.logo>.inLogo{
+    display: none;
+}
 nav>h3{
     font-size: 2.5vw;
     color: red;
     margin-left: 1.5vw;
 }
-nav>.menu{
+nav>ul{
     height: 100%;
     flex-grow: 2;
     display: flex;
     justify-content: flex-end;
     padding-right: 2vw;
 }
-nav>.menu>li{
+nav>ul>li{
     height: 100%;
     border-top: 2px solid transparent;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-nav>.menu a{
+nav>ul a{
     display: inline-block;
     padding: 0.5vw 1vw;
     color: #555;
     font-size: 1.2vw;
 }
-li:hover a{
+ul li:hover a{
     color: orange;
 }
-.menu li:hover{
+.ul li:hover{
    border-top: 2px solid orange; 
 }
 header>h2{
@@ -240,7 +243,7 @@ article>.portfolio>div{
     nav>h3{
         font-size: 3.3vw;
     }
-    nav>.menu a{
+    nav>ul a{
         font-size: 2vw;
     }
     header>h2{
@@ -284,23 +287,61 @@ article>.portfolio>div{
         height: 8vw;
     }
     nav{
-        height: 9vw;
+        width: 100%;
+        height: auto;
+        flex-wrap: wrap;
     }
     nav>.logo{
         width: 9vw;
         height: 9vw;
     }
+    nav>.logo>.inLogo{
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
     nav>h3{
         font-size: 6vw;
+        width: 60vw;
+        text-align: end;
+        padding-right: 2vw;
     }
-    nav>.menu{
+
+    nav>ul{
         display: none;
     }
+    .menu{
+        width: 100%;
+        height: 0;
+        /* display: block; */
+        overflow: hidden;
+    }
+    .menu>li{
+        height: auto;
+        display: flex;
+        justify-content: center;
+
+    }
+    .menu>li>a{
+        color: #555;
+        width: 100%;
+        text-align: center;
+        font-size: 4vw;
+        padding: 6px;
+    }
+    .menu>li>a:hover{
+       color: white;
+       background: orange;
+    }
+
     header>h2{
+        color: #000;
         font-size: 5.5vw;
         margin-top: 5.5vw;
+        border-bottom-color: #000;
     }
     header>p{
+        color: #000;
         font-size: 2.5vw;
         margin-top: 1.5vw;
     }
@@ -326,4 +367,18 @@ article>.portfolio>div{
         height: 64vw;
         margin-bottom: 3vw;
     }
+    
+    .drop_down{
+        display: block;
+        animation: openMenu .5s linear;
+        animation-fill-mode: forwards;
+    }
+    
+ 
+
+    @keyframes openMenu {
+        0%{height: 0;}
+        100%{height: 56vw;}
+    }
+  
 }
