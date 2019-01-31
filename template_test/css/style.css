@@ -86,10 +86,10 @@ nav>ul a{
     color: #555;
     font-size: 1.2vw;
 }
-ul li:hover a{
+nav ul li:hover a{
     color: orange;
 }
-.ul li:hover{
+nav ul li:hover{
    border-top: 2px solid orange; 
 }
 header>h2{
