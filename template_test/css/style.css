@@ -24,11 +24,17 @@ header{
     /* height: 30%; */
     background: url('../image/slide1.jpg');
     background-size: cover;
+    
+}
+.onHeader{
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 2%;
+    padding-bottom: 4%;
+    background: rgba(0, 0, 0, 0.4);
 }
 .social{
     padding: 10px;
@@ -52,12 +58,12 @@ nav{
     justify-content: space-between;
     align-items: center;
     width: 80%;
-    /* height: 55px; */
+    height: 55px;
     background: white;
 }
 nav>.logo{
-    width: 60px;
-    height: 60px;
+    width: 55px;
+    height: 55px;
     background-image: url('../image/logo.png');
     background-size: cover;
 }
@@ -78,35 +84,47 @@ nav>ul{
 }
 nav>ul>li{
     height: 100%;
-    border-top: 2px solid transparent;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 nav>ul a{
+    height: 100%;
     display: inline-block;
-    padding: 5px 10px;
+    border-top: 2px solid transparent;
+    padding: 19px 10px;
     color: #555;
     font-size: 14px;
 }
 nav ul li:hover a{
     color: orange;
+    border-top: 2px solid orange; 
+    animation: menu 0.2s ease-in forwards;
 }
-nav ul li:hover{
-   border-top: 2px solid orange; 
+/* nav ul li:hover{
+   
+} */
+@keyframes menu{
+    0%{padding-top: 19px;padding-bottom: 19px;}
+    33%{padding-top: 29px;padding-bottom: 9px;}
+    66%{padding-top: 24px;padding-bottom: 14px;}
+    100%{padding-top: 29px;padding-bottom: 9px;}
+    /* 100%{padding-top: 5px;padding-bottom: 5px;} */
 }
-header>h2{
+header>.onHeader>h2{
     color: white;
     font-size: 30px;
     border-bottom: 2px solid white;
-    margin-top: 5%;
+    margin-top: 7%;
+    text-align: center;
 }
-header>p{
+header>.onHeader>p{
     font-size: 14px;
     color: white;
+    text-align: center;
     margin-top: 1%;
 }
-header>button{
+header>.onHeader>button{
     font-size: 12px;
     color: white;
     background: red;
@@ -122,10 +140,10 @@ section, article{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* margin-top: 2vw; */
     padding-top: 2%;
 }
 section>h3, article>h3{
+    text-align: center;
     border-bottom: 1px solid black;
 }
 section>p, article>p{
@@ -139,7 +157,6 @@ section>.items{
     display: flex;
     justify-content: space-between;
     margin-top: 2%;
-    /* padding-bottom: 1vw; */
 }
 section>.items>*{
     font-size: 18px;
@@ -179,136 +196,84 @@ article>.portfolio{
 article>.portfolio>div{
     margin-bottom: 2%;
 }
-
+/* ------------------------media----------------------------------------------- */
 @media only screen and (max-width: 1000px) {
-    /* .social>*{
-        font-size: 2.5vw;
-        width: 5vw;
-        height: 5vw;
-    }
-    nav{
-        height: 6vw;
-    }
-    nav>.logo{
-        width: 6vw;
-        height: 6vw;
-    }
-    nav>.menu a{
-        font-size: 2vw;
-    }
-    header>h2{
-        font-size: 3.5vw;
-        margin-top: 5.5vw;
-    }
-    header>p{
-        font-size: 2vw;
-        margin-top: 1.5vw;
-    }
-    header>button{
-        font-size: 2vw;
-        padding: 1vw 1.5vw;
-        margin-top: 1.5vw;
-        margin-bottom: 2vw;
-    }
-
-
-    section>p, article>p{
-        font-size: 2vw;
-    }
-    #container{
-        width: 100%;
-    } */
     section>.items>*{
-        /* font-size: 3vw; */
         width: 16vw;
         height: 16vw;
     }
     article>.portfolio>div{
         width: 16vw;
         height: 16vw;
-        /* margin-bottom: 2vw; */
     } 
 }
 @media only screen and (max-width: 760px) {
+    .social>*{
+        font-size: 12px;
+        width: 26px;
+        height: 26px;
+        margin-right: 5px;
+        margin-left: 5px;
+    }
     nav{
         display: flex;
-        /* justify-content: space-between; */
         flex-direction: column;
         align-items: center;
         width: 100%;
-        /* height: 100px; */
+        height: fit-content;
         background: rgba(255, 255, 255, 0.4);
     }
     nav>h3{
         margin-top: 1%;
         margin-left: 0;
     }
-    /* .social>*{
-        font-size: 3vw;
-        width: 5.5vw;
-        height: 5.5vw;
-    }
-    nav{
-        height: 6vw;
-    }
-    nav>.logo{
-        width: 6vw;
-        height: 6vw;
-    }
-    nav>h3{
-        font-size: 3.3vw;
-    }
     nav>ul a{
-        font-size: 2vw;
+        color: #444;
+        font-size: 12px;
     }
-    header>h2{
-        font-size: 4vw;
-        margin-top: 5.5vw;
+    nav ul li:hover a{
+        color: white;
+        border-top: 2px solid white; 
     }
-    header>p{
-        font-size: 2.5vw;
-        margin-top: 1.5vw;
+    /* nav ul li:hover{
+       border-top: 2px solid white; 
+    } */
+    header>.onHeader>h2{
+        font-size: 26px;
+        margin-top: 10%;
     }
-    header>button{
-        font-size: 2.5vw;
-        margin-top: 1.5vw;
-        margin-bottom: 2vw;
+   
+    header>.onHeader>p{
+        font-size: 12px;
     }
-
-
     section>p, article>p{
-        font-size: 2.5vw;
-        margin-bottom: 2vw;
+        font-size: 12px;
+        text-align: center;
     }
+    
     section>.items{
         flex-wrap: wrap;
+        justify-content: space-around;
     }
     section>.items>*{
-        font-size: 4vw;
-        width: 32vw;
-        height: 32vw;
-        margin-bottom: 3vw;
+        font-size: 3.5vw;
+        width: 30vw;
+        height: 30vw;
+        margin-bottom: 3.5vw;
+    }
+    article>.portfolio{
+        justify-content: space-around;
     }
     article>.portfolio>div{
-        width: 32vw;
-        height: 32vw;
-        margin-bottom: 3vw;
-    } */
+        width: 30vw;
+        height: 30vw;
+        margin-bottom: 3.5vw;
+    }
 }
 @media only screen and (max-width: 380px) {
-    .social>*{
-        font-size: 4.5vw;
-        width: 8vw;
-        height: 8vw;
-    }
-    nav{
-        width: 100%;
-        height: auto;
-        flex-wrap: wrap;
-    }
     nav>.logo{
-        width: 9vw;
-        height: 9vw;
+        width: 40px;
+        height: 40px;
     }
     nav>.logo>.inLogo{
         display: block;
@@ -316,14 +281,12 @@ article>.portfolio>div{
         height: 100%;
     }
     nav>h3{
-        font-size: 6vw;
-        width: 60vw;
-        text-align: end;
-        padding-right: 2vw;
+        font-size: 24px;
     }
 
     nav>ul{
         display: none;
+        padding-right: 0;
     }
     .menu{
         width: 100%;
@@ -335,51 +298,43 @@ article>.portfolio>div{
         height: auto;
         display: flex;
         justify-content: center;
-
+        /* margin-bottom: 1%; */
     }
     .menu>li>a{
         color: #555;
         width: 100%;
+        height: 100%;
         text-align: center;
-        font-size: 4vw;
-        padding: 6px;
+        border: none;
+        padding: 12px 10px;
+        /* padding: 6px; */
     }
     .menu>li>a:hover{
-       color: white;
-       background: orange;
+        border: none;
+        animation: none;
+        color: white;
+        background: rgba(0, 0, 0, 0.4);
     }
 
-    header>h2{
-        color: #000;
-        font-size: 5.5vw;
-        margin-top: 5.5vw;
-        border-bottom-color: #000;
-    }
-    header>p{
-        color: #000;
-        font-size: 2.5vw;
-        margin-top: 1.5vw;
-    }
-    header>button{
-        font-size: 2.5vw;
-        margin-top: 1.5vw;
-        margin-bottom: 2vw;
+    
+    header>.onHeader>button{
+        font-size: 10px;
     }
     section>p, article>p{
-        font-size: 3vw;
+        font-size: 10px;
     }
     section>.items{
         flex-wrap: wrap;
     }
     section>.items>*{
         font-size: 6vw;
-        width: 64vw;
-        height: 64vw;
+        width: 55vw;
+        height: 55vw;
         margin-bottom: 3vw;
     }
     article>.portfolio>div{
-        width: 64vw;
-        height: 64vw;
+        width: 55vw;
+        height: 55vw;
         margin-bottom: 3vw;
     }
     
@@ -393,7 +348,7 @@ article>.portfolio>div{
 
     @keyframes openMenu {
         0%{height: 0;}
-        100%{height: 56vw;}
+        100%{height: 190px;}
     }
   
 }

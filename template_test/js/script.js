@@ -5,13 +5,16 @@ document.body.insertBefore(con, document.getElementsByTagName('script')[0]);
 
 /* create header */
 var header = document.createElement('HEADER');
+var onHeader = document.createElement('div');
+onHeader.classList.add('onHeader');
+header.appendChild(onHeader);
 con.appendChild(header);
 
 /* create social block and add fonts*/
 var social = document.createElement('DIV');
 var nav = document.createElement('NAV');
 social.classList.add('social');
-header.appendChild(social);
+onHeader.appendChild(social);
 
 
 var classFonts = [
@@ -31,7 +34,7 @@ for (let i = 0; i < classFonts.length; i++) {
 }
 
 /* create navigation block*/
-header.appendChild(nav);
+onHeader.appendChild(nav);
 var logo = document.createElement('DIV');
 var inLogo = document.createElement('DIV');
 inLogo.className = 'inLogo';
@@ -66,15 +69,15 @@ nav.appendChild(ul);
 // ----
 var h2 = document.createElement('h2');
 h2.appendChild(document.createTextNode('DIGITAL STUDIO'));
-header.appendChild(h2);
+onHeader.appendChild(h2);
 
 var p = document.createElement('p');
 p.appendChild(document.createTextNode('LET US DESIGN YOUR WEBSITE'));
-header.appendChild(p);
+onHeader.appendChild(p);
 
 var but = document.createElement('button');
 but.appendChild(document.createTextNode('RESPONSIVE TEMPLATE'));
-header.appendChild(but);
+onHeader.appendChild(but);
 
 // ---------------SECTION----------
 var section = document.createElement('section');
