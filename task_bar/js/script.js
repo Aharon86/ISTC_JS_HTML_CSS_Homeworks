@@ -1,7 +1,7 @@
 document.getElementById('but').addEventListener('click', addToDoList);  //get button and adding click function
 
-var err = document.getElementsByClassName('error')[0];      //get error field 
-var section = document.getElementsByTagName('section')[0];
+var err = document.getElementsByClassName('error')[0];      // get error field 
+var section = document.getElementsByTagName('section')[0];  // get block for tasks
 var taskList = [];                                          // array for adding tasks
 var iconsClass = {                                          // object for icons
         check: 'far fa-check-square',
@@ -12,6 +12,7 @@ var iconsClass = {                                          // object for icons
 function addToDoList() {
     var inp = document.getElementById('inp');           // get input field
 
+    /* check filling input */
     if (inp.value == '') {
         err.innerHTML = 'Please enter the task!';
         return;
@@ -19,16 +20,18 @@ function addToDoList() {
     err.innerHTML = '';
 
     taskList.unshift( {task: inp.value, made: false} );    // adding front
-    inp.value = '';                                        //clearing input field
-    createTaskTable(taskList);
+    inp.value = '';                                        // clearing input field
+    createTaskTable(taskList);                             // call function creating 
+
     console.log(taskList);
 
 }
 
 /* creating a task table */
 function createTaskTable(list) {
-    section.innerHTML = '';
+    section.innerHTML = '';                         // clearing 'section' block
 
+    /* creating previous task section and its nested items */
     for (let i = 0; i < list.length; i++) {
         var block = document.createElement('div');
         block.classList.add('item'); 

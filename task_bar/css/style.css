@@ -65,7 +65,17 @@ section>.item>span:nth-child(1){
 section>.item>i{
     font-size: 20px;
 }
-section>.item>p{
+section>div>*:not( :last-child ){
+    color: green;
+}
+section>.item>*:last-child{
+    color: #CBCBCB;
+}
+section>div>p{
+    color: green;
     flex-grow: 1;
     word-break: break-all;
+}
+section>.item>p::first-letter{
+    text-transform: uppercase;
 }
