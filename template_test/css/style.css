@@ -18,10 +18,10 @@ body{
    width: 100%;
    max-width: 1000px;
    height: 100%;
-   min-height: 1000px;
+   min-height: 959px;
 }
 header{
-    /* height: 30%; */
+    height: 30%;
     background: url('../image/slide1.jpg');
     background-size: cover;
     
@@ -30,10 +30,10 @@ header{
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: flex-start;
+    /* justify-content: flex-start; */
     flex-direction: column;
     align-items: center;
-    padding-bottom: 4%;
+    padding-bottom: 2%;
     background: rgba(0, 0, 0, 0.4);
 }
 .social{
@@ -54,16 +54,16 @@ header{
     align-items: center;
 }
 nav{
+    height: fit-content;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 80%;
-    height: 55px;
     background: white;
 }
 nav>.logo{
     width: 55px;
-    height: 55px;
+    height: 100%;
     background-image: url('../image/logo.png');
     background-size: cover;
 }
@@ -140,7 +140,13 @@ section, article{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 2%;
+    padding-top: 1%;
+}
+section{
+    height: 25%;
+}
+article{
+    height: 45%;
 }
 section>h3, article>h3{
     text-align: center;
@@ -156,7 +162,7 @@ section>.items{
     width: 70%;
     display: flex;
     justify-content: space-between;
-    margin-top: 2%;
+    margin-top: 1%;
 }
 section>.items>*{
     font-size: 18px;
@@ -190,7 +196,7 @@ article>.portfolio{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-top: 2%;
+    margin-top: 1%;
     /* padding-bottom: 1vw; */
 }
 article>.portfolio>div{
@@ -208,6 +214,9 @@ article>.portfolio>div{
     } 
 }
 @media only screen and (max-width: 760px) {
+    header{
+        height: fit-content;
+    }
     .social>*{
         font-size: 12px;
         width: 26px;
@@ -246,6 +255,12 @@ article>.portfolio>div{
     header>.onHeader>p{
         font-size: 12px;
     }
+    section{
+        height: fit-content;
+    }
+    article{
+        height: fit-content;
+    }
     section>p, article>p{
         font-size: 12px;
         text-align: center;
@@ -271,6 +286,7 @@ article>.portfolio>div{
     }
 }
 @media only screen and (max-width: 380px) {
+    
     nav>.logo{
         width: 40px;
         height: 40px;
