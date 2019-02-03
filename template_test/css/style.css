@@ -30,12 +30,13 @@ header{
     width: 100%;
     height: 100%;
     display: flex;
-    /* justify-content: flex-start; */
     flex-direction: column;
+    justify-content: space-around ;
     align-items: center;
     padding-bottom: 2%;
     background: rgba(0, 0, 0, 0.4);
 }
+
 .social{
     padding: 10px;
     display: flex;
@@ -54,16 +55,19 @@ header{
     align-items: center;
 }
 nav{
+    width: 80%;
     height: fit-content;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 80%;
     background: white;
+}
+nav>*{
+    display: inline-block;
 }
 nav>.logo{
     width: 55px;
-    height: 100%;
+    height: 55px;
     background-image: url('../image/logo.png');
     background-size: cover;
 }
@@ -92,37 +96,39 @@ nav>ul a{
     height: 100%;
     display: inline-block;
     border-top: 2px solid transparent;
-    padding: 19px 10px;
+    padding: 18px 10px;
     color: #555;
     font-size: 14px;
 }
 nav ul li:hover a{
     color: orange;
-    border-top: 2px solid orange; 
-    animation: menu 0.2s ease-in forwards;
+    /* border-top: 2px solid orange;  */
+    animation: menu .6s ease-in forwards;
 }
 /* nav ul li:hover{
    
 } */
 @keyframes menu{
-    0%{padding-top: 19px;padding-bottom: 19px;}
-    33%{padding-top: 29px;padding-bottom: 9px;}
-    66%{padding-top: 24px;padding-bottom: 14px;}
-    100%{padding-top: 29px;padding-bottom: 9px;}
+    0%{padding-top: 18px;padding-bottom: 18px;border-top: 2px solid transparent;}
+    33%{padding-top: 28px;padding-bottom: 8px;}
+    66%{padding-top: 23px;padding-bottom: 13px;}
+    100%{padding-top: 28px;padding-bottom: 8px;border-top: 2px solid orange;}
     /* 100%{padding-top: 5px;padding-bottom: 5px;} */
 }
 header>.onHeader>h2{
     color: white;
     font-size: 30px;
     border-bottom: 2px solid white;
-    margin-top: 7%;
+    padding-top: 4%;
+    /* flex-grow: 1; */
+    /* margin-top: 7%; */
     text-align: center;
 }
 header>.onHeader>p{
     font-size: 14px;
     color: white;
     text-align: center;
-    margin-top: 1%;
+    margin-top: 2%;
 }
 header>.onHeader>button{
     font-size: 12px;
@@ -255,15 +261,15 @@ article>.portfolio>div{
     header>.onHeader>p{
         font-size: 12px;
     }
-    section{
+    section, article{
         height: fit-content;
+        margin-top: 3vw;
     }
-    article{
-        height: fit-content;
-    }
+    
     section>p, article>p{
         font-size: 12px;
         text-align: center;
+        margin-bottom: 3vw;
     }
     
     section>.items{

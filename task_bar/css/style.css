@@ -43,39 +43,47 @@ section{
     border-radius: 5px;
 }
 /* -----------------items------------------ */
-section>.item{
+section>div{
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 15px;
 }
-section>.item:not( :last-child ){
+section>div:not( :last-child ){
     border-bottom: 1px solid #DDDDDD;
 }
-section>.item>*{
+section>div>*{
     display: inline-block;
     margin-left: 5px;
 }
-section>.item>span:nth-child(1){
+section>div>span:nth-child(1){
     display: none;
 }
-section>.item>span:nth-child(1){
-    display: none;
-}
-section>.item>i{
+section>div>i{
     font-size: 20px;
+    cursor: pointer;
 }
-section>div>*:not( :last-child ){
-    color: green;
-}
-section>.item>*:last-child{
+section>div>*:last-child{
     color: #CBCBCB;
 }
+section>div>p::first-letter{
+    text-transform: uppercase;
+}
 section>div>p{
-    color: green;
     flex-grow: 1;
     word-break: break-all;
 }
-section>.item>p::first-letter{
-    text-transform: uppercase;
+
+section>.not_done>*:not( :last-child ){
+    color: green;
+}
+section>.not_done>p{
+    color: green;
+}
+section>.done>*:not( :last-child ){
+    color: red;
+}
+section>.done>p{
+    color: red;
+    text-decoration: line-through;
 }

@@ -23,7 +23,7 @@ function addToDoList() {
     inp.value = '';                                        // clearing input field
     createTaskTable(taskList);                             // call function creating 
 
-    console.log(taskList);
+    // console.log(taskList);
 
 }
 
@@ -34,7 +34,6 @@ function createTaskTable(list) {
     /* creating previous task section and its nested items */
     for (let i = 0; i < list.length; i++) {
         var block = document.createElement('div');
-        block.classList.add('item'); 
 
         var span = document.createElement('span');
         span.appendChild(document.createTextNode(i));
@@ -48,6 +47,15 @@ function createTaskTable(list) {
         var iconTrash = document.createElement('i');
         iconTrash.className = iconsClass.trash;
 
+        /* checking tasks done or not done, and overeating the appropriate style */
+        if (list[i].made) {                          
+            block.className = 'done'; 
+        } else {
+            block.className = 'not_done'; 
+            iconCheck.addEventListener('click', taskDone);
+        }
+        iconTrash.addEventListener('click', deleteTask);
+
         block.appendChild(span);
         block.appendChild(iconCheck);
         block.appendChild(text);
@@ -56,4 +64,16 @@ function createTaskTable(list) {
         
     }
     
+}
+/* if done it is marked true */
+function taskDone(event) {
+    var taskId = event.target.parentElement.children[0].innerHTML;
+    taskList[taskId].made = true;
+    createTaskTable(taskList);
+}
+/* delete task*/
+function deleteTask(event) {
+    var taskId = event.target.parentElement.children[0].innerHTML;
+    taskList.splice(taskId, 1);
+    createTaskTable(taskList);
 }
