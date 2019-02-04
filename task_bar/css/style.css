@@ -56,9 +56,9 @@ section>div>*{
     display: inline-block;
     margin-left: 5px;
 }
-section>div>span:nth-child(1){
+/* section>div>span:nth-child(1){
     display: none;
-}
+} */
 section>div>i{
     font-size: 20px;
     cursor: pointer;
