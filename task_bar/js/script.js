@@ -28,16 +28,16 @@ function addToDoList() {
 
 /* creating a task table */
 function createTaskTable(list) {
-    section.innerHTML = '';                         // clearing 'section' block
+    // section.innerHTML = '';                         // clearing 'section' block
 
     arrElements = [];
 
     /* creating previous task section and its nested items */
-    for (let i = 0; i < list.length; i++) {
+    // for (let i = 0; i < list.length; i++) {
         var block = document.createElement('div');
 
         var text = document.createElement('p');
-        text.appendChild(document.createTextNode(list[i].task));
+        text.appendChild(document.createTextNode(list[0].task));
 
         var iconCheck = document.createElement('i');
         iconCheck.className = iconsClass.check;
@@ -51,7 +51,7 @@ function createTaskTable(list) {
         section.appendChild(block);
 
         /* checking tasks done or not done, and overeating the appropriate style */
-        if (list[i].made) {                          
+        if (list[0].made) {                          
             block.className = 'done'; 
         } else {
             block.className = 'not_done'; 
@@ -61,7 +61,7 @@ function createTaskTable(list) {
 
         arrElements.push(block);                                       
         
-    }
+    // }
 
     // console.log(arrElements);
 }
