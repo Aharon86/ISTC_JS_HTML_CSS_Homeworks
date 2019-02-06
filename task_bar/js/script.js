@@ -1,4 +1,4 @@
-document.getElementById('but').addEventListener('click', addToDoList);  //get button and adding click function
+document.getElementById('add').addEventListener('click', addToDoList);  //get button and adding click function
 
 var err = document.getElementsByClassName('error')[0];      // get error field 
 var section = document.getElementsByTagName('section')[0];  // get block for tasks
