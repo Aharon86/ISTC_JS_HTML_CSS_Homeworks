@@ -1,4 +1,7 @@
 document.getElementById('add').addEventListener('click', addToDoList);  //get button and adding click function
+document.getElementById('show_all').addEventListener('click', showAll);
+document.getElementById('show_active').addEventListener('click', showActive);
+document.getElementById('show_completed').addEventListener('click', showCompleted);
 
 var err = document.getElementsByClassName('error')[0];      // get error field 
 var section = document.getElementsByTagName('section')[0];  // get block for tasks
@@ -9,7 +12,7 @@ var iconsClass = {                                          // object for icons
     };
 var arrElements = [];                                      //block tasks
 
-/* function to add tasks */
+/* function to add tasks -----------------------------------------------------*/
 function addToDoList() {
     var inp = document.getElementById('inp');           // get input field
 
@@ -21,60 +24,92 @@ function addToDoList() {
     err.innerHTML = '';
 
     taskList.unshift( {task: inp.value, made: false} );    // adding front
-    inp.value = '';                                        // clearing input field
-    createTaskTable(taskList);                             // call function creating 
+    inp.value = ''; 
+    createTaskTable(taskList[0]);                             // call function creating 
 }
 
-
-/* creating a task table */
-function createTaskTable(list) {
-    // section.innerHTML = '';                         // clearing 'section' block
-
-    arrElements = [];
-
+/* creating a task table ----------------------------------------------------------*/
+function createTaskTable(listObj, id = 0) {
+   
     /* creating previous task section and its nested items */
-    // for (let i = 0; i < list.length; i++) {
-        var block = document.createElement('div');
+    var addBlock = document.createElement('div');
+    changeStyle(addBlock, id);
+    arrElements.unshift(addBlock);
 
-        var text = document.createElement('p');
-        text.appendChild(document.createTextNode(list[0].task));
+    var text = document.createElement('p');
+    text.appendChild(document.createTextNode(listObj.task));
 
-        var iconCheck = document.createElement('i');
-        iconCheck.className = iconsClass.check;
+    var iconCheck = document.createElement('i');
+    iconCheck.className = iconsClass.check;
 
-        var iconTrash = document.createElement('i');
-        iconTrash.className = iconsClass.trash;
+    var iconTrash = document.createElement('i');
+    iconTrash.className = iconsClass.trash;
 
-        block.appendChild(iconCheck);
-        block.appendChild(text);
-        block.appendChild(iconTrash);
-        section.appendChild(block);
+    addBlock.appendChild(iconCheck);
+    addBlock.appendChild(text);
+    addBlock.appendChild(iconTrash);
+    section.insertBefore(addBlock, section.childNodes[0]);
 
-        /* checking tasks done or not done, and overeating the appropriate style */
-        if (list[0].made) {                          
-            block.className = 'done'; 
-        } else {
-            block.className = 'not_done'; 
-            iconCheck.addEventListener('click', taskDone);
-        }
-        iconTrash.addEventListener('click', deleteTask);
-
-        arrElements.push(block);                                       
-        
-    // }
-
-    // console.log(arrElements);
+    iconCheck.addEventListener('click', changeMade);
+    iconTrash.addEventListener('click', deleteTask);
 }
-
-/* if done it is marked true */
-function taskDone(event) {
-    var taskId = arrElements.indexOf(event.target.parentElement);
-    taskList[taskId].made = true;
-    createTaskTable(taskList);
+/* change task styles --------------------------------------------------------------*/
+function changeStyle(block, id) {
+    if (taskList[id].made) {
+        block.className = 'done'; 
+    } else {
+        block.className = 'not_done'; 
+    }
 }
-/* delete task*/
+/* change task status */
+function changeMade(event) {
+    var eventBlock = event.target.parentElement;
+    var taskId = arrElements.indexOf(eventBlock); 
+    
+    if (taskList[taskId].made) {                          
+        taskList[taskId].made = false;
+    } else {
+        taskList[taskId].made = true;
+    }
+    changeStyle(eventBlock, taskId);
+}
+/* delete task---------------------------------------------------------------------*/
 function deleteTask(event) {
-    var taskId = arrElements.indexOf(event.target.parentElement);
+    var eventBlock = event.target.parentElement;
+    var taskId = arrElements.indexOf(eventBlock);
     taskList.splice(taskId, 1);
-    createTaskTable(taskList);
+    arrElements.splice(taskId, 1);
+    eventBlock.remove();
+}
+/* All tasks---------------------------------------------------------------------*/
+function showAll() {
+    section.innerHTML = ''; 
+    for (let i = taskList.length - 1; i >= 0; i--) {
+        createTaskTable(taskList[i], i);
+    }
+}
+/* Active tasks------------------------------------------------------------------*/
+function showActive() {
+    arrElements = [];
+    section.innerHTML = ''; 
+    for (let i = taskList.length - 1; i >= 0; i--) {
+        if (!taskList[i].made) {
+            createTaskTable(taskList[i], i);
+        } else {
+            arrElements.unshift('');
+        }
+       
+    }
+}
+/* Completed tasks----------------------------------------------------------------*/
+function showCompleted() {
+    arrElements = [];
+    section.innerHTML = ''; 
+    for (let i = taskList.length - 1; i >= 0; i--) {
+        if (taskList[i].made) {
+            createTaskTable(taskList[i], i);
+        } else {
+            arrElements.unshift('');
+        }
+    }
 }
