@@ -1,0 +1,289 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+html, body, #wrapper{
+    width: 100%;
+    min-width: 380px;
+}
+header{
+    color: #fff;
+    font: 500 14px/24px 'Roboto',sans-serif;
+    width: 100%;
+    background: #3a3c3e;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 8px 15px 12px;
+}
+header>.about{
+    width: 83%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+header>.about i{
+    color: #37ca8a;
+}
+
+header>.about>*{
+    margin-right: 35px;
+    padding: 0 10px;
+}
+header>.social{
+    width: 17%;
+    min-width: 106px;
+    display: flex;
+    justify-content: center;
+}
+header>.social a{
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    color: #fff;
+    background: #464a4d;
+    line-height: 25px;
+    display: inline-block;
+    font-size: 12px;
+    text-align: center;
+    margin-left: 10px;
+    transition: all .5s ease;
+}
+header>.social a:hover {
+    background: #37ca8a;
+}
+nav{
+    padding: 38px 15px;
+    position: sticky;
+    top: -35px;
+}
+nav>.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+nav>.container>.logo{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+}
+nav>.container>ul{
+    width: 75%;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+}
+nav a{
+    color: #25313d;
+    display: inline-block;
+    transition: all .5s ease;
+}
+nav>.container>ul>li:last-child a{
+    padding-left: 50px;
+}
+nav>.container>ul>li:not(:last-child ) a{
+    padding: 0 25px;
+}
+nav a:hover{
+    color: #37ca8a;
+}
+nav>.container>ul>li:nth-child(3)>a::after{
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    display: inline-block;
+    transform: rotateZ(45deg);
+    margin-left: 5px;
+    position: relative;
+    top: -3px;
+    transition: all .5s ease;
+}
+nav>.container>ul>li:nth-child(3){
+    position: relative;
+}
+nav>.container>ul>li:nth-child(3)>ul{
+    position: absolute;
+    width: 150px;
+    background: #3a3c3e;
+    padding: 15px 0;
+    left: 50%;
+    transform: translate(-50%,60px);
+    transition: all .2s ease;
+    visibility: hidden;
+    opacity: 0;
+    /* z-index: 100; */
+}
+nav>.container>ul>li:nth-child(3):hover>ul{
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-50%, 15px);
+    /* display: none; */
+}
+nav>.container>ul>li:nth-child(3)>ul::before{
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: #3a3c3e;
+    position: absolute;
+    transform: rotate(45deg);
+    transform-origin: 50% 50%;
+    left: 43%;
+    top: -2%;
+}
+nav>.container>ul>li:nth-child(3)>ul>li>a{
+    color: #fff;
+    display: block;
+    padding: 4px 20px;
+}
+nav>.container>ul>li:nth-child(3)>ul>li>a:hover{
+    color: #37ca8a;
+}
+nav>.container>ul>li:nth-child(3)>a:hover::after{
+    border-right: 1px solid #37ca8a;
+    border-bottom: 1px solid #37ca8a;
+}
+nav>.container>ul>li:last-child{
+    position: relative;
+}
+/* ---------------------------LOGIN----------------------- */
+nav>.container>ul>li:last-child>.login{
+    width: 330px;
+    background: white;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    padding: 30px;
+    border-top: 15px solid #3a3c3e;
+    border-bottom: 15px solid #3a3c3e;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.2s linear;
+}
+nav>.container>ul>li:last-child>.login::before{
+    content: '';
+    position: absolute;
+    border: 15px solid transparent;
+    border-left: 15px solid #3a3c3e;
+    top: -30px;
+    right: -15px;
+    transform: rotate(45deg);
+}
+nav>.container>ul>li:last-child>.login>form{
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+}
+nav>.container>ul>li:last-child>.login>form>input{
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    margin-bottom: 16px;
+    padding: 0 14px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #dedede;
+    transition: all 1s ease;
+}
+nav>.container>ul>li:last-child>.login>form>input:focus {
+    border-bottom: 1px solid #3a3c3e;
+}
+nav>.container>ul>li:last-child>.login>form>label{
+    margin-bottom: 16px;
+    display: flex;
+}
+nav>.container>ul>li:last-child>.login>form #checkbox{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 0;
+    margin-right: 5px;
+}
+nav>.container>ul>li:last-child>.login>form button{
+    width: 80px;
+    height: 40px;
+    color: #fff;
+    font-size: 14px;
+    background: #37ca8a;
+    border: none;
+    margin-bottom: 16px;
+    padding: 0 14px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+nav>.container>ul>li:last-child>.login>form button:hover{
+    background: black;
+}
+nav>.container>ul>li:last-child>.login>.link>a{
+    padding-left: 0;
+    display: block;
+}
+nav>.container>ul>li:last-child>.login>.social>*{
+    display: inline-block;
+    padding: 10px 15px;
+    background: #37ca8a;
+    margin-top: 4px;
+}
+nav>.container>ul>li:last-child>.login>.social>*:hover{
+    background: black;
+}
+nav>.container>ul>li:last-child:hover>.login *,
+nav>.container>ul>li:last-child:hover>.login{
+    top: 40px;
+    visibility: visible;
+    opacity: 1;
+}
+
+@media only screen and (max-width: 1000px) {
+    nav>.container>.logo{
+        width: fit-content;
+    }
+    nav>.container>ul{
+        width: fit-content;
+        justify-content: flex-end;
+    }
+    nav>.container>ul>li:not(:last-child ) a{
+        padding: 0 15px;
+    }
+}
+@media only screen and (max-width: 800px) {
+    nav>.container>ul>li:last-child a{
+        padding-left: 35px;
+    }
+    nav>.container>ul>li:not(:last-child ) a{
+        padding: 0 10px;
+    }
+}
+@media only screen and (max-width: 650px) {
+    #wrapper{
+        margin-top: 40px;
+    }
+    header{
+        flex-direction: column;
+    }
+    header>.about{
+        justify-content: space-around;
+        flex-direction: column;
+        text-align: center;
+        width: 96%;
+    }
+    header>.about>*{
+        margin-right: 0;
+    }
+    header>.social{
+        margin-top: 15px;
+        width: 96%;
+    }
+}
+
+@media only screen and (max-width: 573px) {
+    
+}
