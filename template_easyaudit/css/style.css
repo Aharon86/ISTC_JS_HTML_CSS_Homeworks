@@ -247,6 +247,7 @@ nav>.container>ul>li:last-child:hover>.login{
     height: 36vw;
     /* max-height: 500px; */
     position: relative;
+    overflow: hidden;
 }
 #slider>.item{
     width: 100%;
@@ -255,13 +256,31 @@ nav>.container>ul>li:last-child:hover>.login{
     background-size: cover;
     position: absolute;
 }
-.item1{
+#item1{
     background-image: url('../images/slide-1.jpg');
+    left: 0%;
 }
-.item2{
+#item2{
     background-image: url('../images/slide-2.jpg');
     left: 100%;
-    display: none;
+    /* display: none; */
+}
+#slider .swiper-button{
+    color: white;
+    font-size: 18px;
+    line-height: 15px;
+    padding: 10px;
+    width: 36px;
+    height: 36px;
+    border: 1px solid white;
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+#slider .swiper-button:hover{
+    background: #37ca8a;
 }
 
 @media only screen and (max-width: 1000px) {

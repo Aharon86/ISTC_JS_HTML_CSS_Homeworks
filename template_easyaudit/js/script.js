@@ -1,25 +1,41 @@
 $(document).ready(function(){
+  
+    var outsideWindow = '#item2';
+    var middleWindow = '#item1';
+    var par;
+    var flag = true;
+    var setI = setTimeout(() => { 
+      $(outsideWindow).css({"left": "100%"}); 
+      slide(1);
+    }, 5000);
+    
+    function slide(dir = 1, who) {
+      if (who == 'click') {
+        clearTimeout(setI);
+      }
 
-    // $(".toggle_1").mouseenter(function(){
-    //   $(".menu_1").animate({'top': '15px'});
-    // });
-    function slide() {
-      $(".item1").animate({'left': -100+'%'}, 1000);
-      $(".item2").css({"display": "block"});
-      $(".item2").animate({'left': '0%'}, 1000, function() {
-        $(".item1").css({"display": "none"});
+      setI = setTimeout(() => { 
+        $(outsideWindow).css({"left": "100%"}); 
+        slide(1);
+      }, 5000);
+      
+      if (flag) {
+        flag = false;
+      }else{
+        return;
+      }
+      
+      par = outsideWindow;
+      outsideWindow = middleWindow;
+      middleWindow = par;
+      $(outsideWindow).animate({'left': (-100 * dir) + '%'}, 1000);
+      $(middleWindow).animate({'left': '0%'}, 1000, function () {
+        flag = true;
       });
+      
     }
-   
-    setInterval(slide, 1000);
+
+    $("#d1").click(() => {$(outsideWindow).css({"left": "-100%"}); slide(-1, 'click');});
+    $("#d2").click(() => {$(outsideWindow).css({"left": "100%"}); slide(1, 'click');});
 
 });
-
-// setInterval(slide, 1000);
-// var item1 = document.getElementsByClassName('item1')[0];
-// var item2 = document.getElementsByClassName('item2')[0];
-// function slide() {
-//   item1.style.left = 
-//   console.log(item1.offsetLeft);
-//   item1.style.left = '20px';
-// }
