@@ -57,15 +57,17 @@ header>.social a:hover {
     background: #37ca8a;
 }
 nav{
-    padding: 38px 15px;
+    padding: 28px 0;
     position: sticky;
     top: -35px;
+    z-index: 100;
 }
 nav>.container{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+    background: white;
+    padding: 10px 15px;
 }
 nav>.container>.logo{
     width: 25%;
@@ -119,7 +121,7 @@ nav>.container>ul>li:nth-child(3)>ul{
     transition: all .2s ease;
     visibility: hidden;
     opacity: 0;
-    /* z-index: 100; */
+    z-index: 10;
 }
 nav>.container>ul>li:nth-child(3):hover>ul{
     visibility: visible;
@@ -248,6 +250,7 @@ nav>.container>ul>li:last-child:hover>.login{
     /* max-height: 500px; */
     position: relative;
     overflow: hidden;
+    z-index: 9;
 }
 #slider>.item{
     width: 100%;
@@ -275,6 +278,7 @@ nav>.container>ul>li:last-child:hover>.login{
     border: 1px solid white;
     position: absolute;
     top: 50%;
+    transform-origin: center center;
     transform: translate(0,-50%);
     cursor: pointer;
     transition: all 0.5s ease;
@@ -282,7 +286,14 @@ nav>.container>ul>li:last-child:hover>.login{
 #slider .swiper-button:hover{
     background: #37ca8a;
 }
-
+#slider .prev{
+    left: 10%;
+    transform: rotate(135deg);
+}
+#slider .next{
+    right: 10%;
+    transform: rotate(-45deg);
+}
 @media only screen and (max-width: 1000px) {
     nav>.container>.logo{
         width: fit-content;

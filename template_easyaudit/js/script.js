@@ -35,7 +35,7 @@ $(document).ready(function(){
       
     }
 
-    $("#d1").click(() => {$(outsideWindow).css({"left": "-100%"}); slide(-1, 'click');});
-    $("#d2").click(() => {$(outsideWindow).css({"left": "100%"}); slide(1, 'click');});
+    $(".prev").click(() => {$(outsideWindow).css({"left": "-100%"}); slide(-1, 'click');});
+    $(".next").click(() => {$(outsideWindow).css({"left": "100%"}); slide(1, 'click');});
 
 });
