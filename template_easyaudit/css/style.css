@@ -283,7 +283,8 @@ nav>.container>ul>li:last-child:hover>.login{
     left: 100%;
     /* display: none; */
 }
-#slider .swiper-button{
+#slider .swiper-button,
+.workers>.workers_team .swiper-button{
     color: white;
     font-size: 18px;
     line-height: 15px;
@@ -301,11 +302,13 @@ nav>.container>ul>li:last-child:hover>.login{
 #slider .swiper-button:hover{
     background: #37ca8a;
 }
-#slider .prev{
+#slider .prev,
+.workers>.workers_team .left{
     left: 5%;
     transform: rotate(135deg);
 }
-#slider .next{
+#slider .next,
+.workers>.workers_team .right{
     right: 5%;
     transform: rotate(-45deg);
 }
@@ -529,7 +532,7 @@ article .article-3>span{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 80px 0 60px;
+    padding: 80px 0 10px;
 }
 .workers>.size{
     width: 100%;
@@ -545,14 +548,32 @@ article .article-3>span{
     font-weight: 100;
 }
 .workers>.workers_team{
-    height: 558px;
+    height: 618px;
     overflow: hidden;
     display: flex;
     justify-content: center;
+    position: relative;
+    padding-bottom: 60px;
+}
+.workers>.workers_team .swiper-button{
+    position: absolute;
+    color: #a7a7a7;
+    border: 1px solid #a7a7a7;
+}
+.workers>.workers_team .left{
+    left: 2%;
+}
+.workers>.workers_team .right{
+    right: 2%;
+}
+.workers>.workers_team .swiper-button:hover{
+    color: white;
+    background: #37ca8a;
+    border: 1px solid white;
 }
 .workers>.workers_team>.team_wrap{
     width: 33.3%;
-    min-width: 330px;
+    min-width: 320px;
     height: 100%;
     position: relative;
 }
@@ -608,6 +629,8 @@ article .article-3>span{
 .workers>.workers_team>.team_wrap>.team a{
     color: black;
 }
+
+
 @media only screen and (max-width: 1000px) {
     nav>.container>.size>.logo{
         width: fit-content;
@@ -634,6 +657,16 @@ article .article-3>span{
     nav>.container>.size>ul>li:not(:last-child ) a{
         padding: 0 10px;
     }
+
+    .workers>.workers_team .swiper-button{
+        top: 93%;
+    }
+    .workers>.workers_team .left{
+        left: 35%;
+    }
+    .workers>.workers_team .right{
+        right: 35%;
+    }
 }
 @media only screen and (max-width: 650px) {
     #wrapper{
@@ -654,6 +687,10 @@ article .article-3>span{
     header>.size>.social{
         margin-top: 15px;
         width: 96%;
+    }
+
+    .workers>.workers_team>.team_wrap{
+        width: 100%;
     }
 }
 

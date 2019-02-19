@@ -51,16 +51,16 @@ $(document).ready(function(){
 
      /* ------------------------workers slide--------------------- */
     var team = $('.team');
-    var teamPosition = ['-200%','-100%','0%', '100%', '200%', '300%',];
+    var teamPosition = ['-200%','-100%','0%', '100%', '200%', '300%'];
     var team1 = [];
     for (let i = 0; i < team.length; i++) {
       team1.push(team.eq(i));
-      team1[i].css({'left': teamPosition[i]});
     }
+    change();
     
     console.log(team1);
-    $('#d1').click(left);
-    $('#d2').click(right);
+    $('.left').click(left);
+    $('.right').click(right);
     function left() {
       team1.unshift(team1.pop());
       change();
@@ -87,8 +87,16 @@ $(document).ready(function(){
                         'border-right': '1px solid transparent'
                       });
         }
+        if (i == (team1.length - 1)) {
+          $(team1[i]).css({'display': 'none'});
+        }else{
+          $(team1[i]).css({'display': 'block'});
+        }
+        
         team1[i].css({'left': teamPosition[i]});
+        
       }
+      
       
     }
 
