@@ -677,7 +677,7 @@ article .article-3>span{
     justify-content: space-between;
 }
 .request_callback>.size>.container>.callback>*{
-    width: 25%;
+    width: 24%;
     height: 52px;
     padding: 14px 25px;
     margin-bottom: 40px;
@@ -760,10 +760,24 @@ article .article-3>span{
     .workers>.workers_team>.team_wrap{
         width: 100%;
     }
-}
 
-@media only screen and (max-width: 573px) {
-    .workers>.workers_team>.team{
+    .request_callback>.size>.container>h2{
+        font-size: 35px;
+    }
+    .request_callback>.size>.container>.callback{
+        flex-direction: column;
+        /* justify-content: space-between; */
+    }
+    .request_callback>.size>.container>.callback>*{
         width: 100%;
     }
+}
+
+@media only screen and (max-width: 480px) {
+
+    .request_callback>.size>.container>h2{
+        font-size: 25px;
+    }
+
+
 }
