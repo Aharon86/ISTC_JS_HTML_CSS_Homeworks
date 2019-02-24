@@ -698,7 +698,19 @@ article .article-3>span{
 .request_callback>.size>.container>.callback>button:hover{
     background: #000;
 }
-
+/* ---------------------------------------main-------------------------------- */
+.main{
+    width: 100%;
+    padding-bottom: 80px;
+    display: flex;
+    justify-content: center;
+    background: url("../images/bg_2.jpg") 50% 50% no-repeat fixed;
+}
+.main>.size{
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 15px;
+}
 @media only screen and (max-width: 1000px) {
     nav>.container>.size>.logo{
         width: fit-content;
