@@ -832,6 +832,96 @@ article .article-3>span{
     color: #37ca8a;
     background: #000;
 }
+/* --------------------------------------mainbottom-------------------- */
+#mainbottom{
+    width: 100%;
+    padding-top: 90px;
+    padding-bottom: 55px;
+    display: flex;
+    justify-content: center;
+}
+#mainbottom *{
+    transition: all 0.3s ease;
+}
+#mainbottom>.size{
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 15px;
+}
+#mainbottom h3{
+    margin-bottom: 20px;
+    font-size: 40px;
+    text-align: center;
+}
+#mainbottom h3>span{
+    font-weight: 100;
+}
+#mainbottom .items{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+#mainbottom .item{
+    width: 33%;
+}
+#mainbottom .item_cont{
+    box-shadow: 0 0 5px rgba(0,0,0,.2);
+}
+#mainbottom .item{
+    padding: 0 15px;
+    margin-bottom: 48px;
+}
+#mainbottom .img{
+    margin-bottom: 23px;
+}
+#mainbottom img{
+    width: 100%;
+}
+#mainbottom .text{
+    padding: 0 25px 20px;
+}
+#mainbottom .text>h6{
+    font-size: 18px;
+    font-weight: 500;
+    padding: 5px 0;
+    margin-bottom: 10px;
+}
+#mainbottom .text>h6>a{
+    color: black;
+}
+#mainbottom .text>h6>a:hover{
+    color: #37ca8a;
+}
+#mainbottom .text>p{
+    color: #9b9b9b;
+    font-size: 12px;
+}
+#mainbottom .text>p>span{
+    white-space: nowrap;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+#mainbottom .text>p:nth-child(2){
+    margin-bottom: 10px;
+}
+#mainbottom .text>p:nth-child(2)>span:nth-child(2)::before{
+    content: '|';
+    display: inline-block;
+    padding: 0 5px;
+    /* height: 10px;
+    border-left: 1px solid; */
+}
+#mainbottom .text>p:last-child{
+    margin-bottom: 17px;
+}
+#mainbottom .text>p:last-child>a{
+    color: #37ca8a;
+}
+#mainbottom .text>p:last-child>a:hover{
+    color: black;
+}
+
+
 @media only screen and (max-width: 1200px) {
     .main{
         background-attachment: scroll;
@@ -855,6 +945,13 @@ article .article-3>span{
     }
     .slide_content p, .slide_content a{
         font-size: 14px;
+    }
+
+    #mainbottom .text{
+        padding: 0 18px 20px;
+    }
+    #mainbottom .text>h6{
+        font-size: 16px;
     }
 
 }
@@ -905,6 +1002,10 @@ article .article-3>span{
         display: block;
         float: none;
     }
+
+    #mainbottom .text>h6{
+        font-size: 15px;
+    }
 }
 @media only screen and (max-width: 650px) {
     #wrapper{
@@ -941,12 +1042,29 @@ article .article-3>span{
     .request_callback>.size>.container>.callback>*{
         width: 100%;
     }
+
+    #mainbottom h3{
+        font-size: 30px;
+    }
+    #mainbottom .item{
+        width: 400px;
+    }
+    #mainbottom .items{
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 @media only screen and (max-width: 480px) {
 
     .request_callback>.size>.container>h2{
         font-size: 25px;
+    }
+
+
+
+    #mainbottom .item{
+        width: 96%;
     }
 
 
