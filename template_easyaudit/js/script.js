@@ -58,7 +58,7 @@ $(document).ready(function(){
     }
     change();
     
-    console.log(team1);
+    // console.log(team1);
     $('.left').click(left);
     $('.right').click(right);
     function left() {
@@ -97,12 +97,62 @@ $(document).ready(function(){
         
       }
       
-      
     }
 
-    // team.eq(1).children().children('img').css({'width': '170px', 'margin-top': '30px'});
-    // for (let i = 0; i < team.length; i++) {
-    //   team.eq(i).css({'left': teamPosition[i]});
-    // }
+    /* ------------------------------main--------------------------------- */
+    var mainArr = [
+          {
+            name: 'Amelia Lee', 
+            post: 'Sales, demolink.org', 
+            exp: '-20%', 
+            prof: '+17%', 
+            about: 'I would not hesitate even one bit to work with them for my future tax and accounting needs.'
+          },
+          {
+            name: 'Mark Wilson', 
+            post: 'CEO “WilsonCompany”', 
+            exp: '-30%', 
+            prof: '+22%', 
+            about: 'I’ve never known another auditor more prepared or focused. You havethe ability to dissect a case much like a skilled surgeon, with absolute calm. Nothing seems to rattle you or distract from the goal on a case.'
+          },
+          {
+            name: 'Jill Miller', 
+            post: 'Artist', 
+            exp: '-29%', 
+            prof: '+19%', 
+            about: 'I am happy that I chose Easy Audit for my US tax returns and would recommend it to everyone.'
+          },
+          {
+            name: 'Christopher Taylor', 
+            post: 'Financial Consultant', 
+            exp: '-20%', 
+            prof: '+17%', 
+            about: 'Over the last 6 years I have found their services to be reliable and their advice to be practical and clear.'
+          }
+      ];
+      var liArr = Array.prototype.slice.call($('#main_img>li'));
+
+      $('#main_img>li').click(showAbout);
+
+      showAbout(liArr[0]);
+
+      function showAbout(el) {
+        var index = liArr.indexOf(this);
+        if (index != -1) {
+          el = this;
+        }else{
+          index = liArr.indexOf(el);
+        }
+        for (let iterator of liArr) {
+          $(iterator).children().css({'border': '2px solid transparent'});
+        }
+        $(el).children().css({'border': '2px solid #fccb56'});
+
+        $('.main_about .name').text(mainArr[index].name);
+        $('.main_about .post').text(mainArr[index].post);
+        $('.expenses>.percent').text(mainArr[index].exp);
+        $('.profit>.percent').text(mainArr[index].prof);
+        $('.message>p').text(mainArr[index].about);
+      }
 
 });
