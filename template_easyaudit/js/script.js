@@ -12,10 +12,10 @@ $(document).ready(function(){
     var middleWindow = '#item1';
     var par;
     var flag = true;
-    var setI = setTimeout(() => { 
-      $(outsideWindow).css({"left": "100%"}); 
-      slide(1);
-    }, 5000);
+    // var setI = setTimeout(() => { 
+    //   $(outsideWindow).css({"left": "100%"}); 
+    //   slide(1);
+    // }, 5000);
     
     function slide(dir = 1, who) {
       if (who == 'click') {
@@ -154,5 +154,52 @@ $(document).ready(function(){
         $('.profit>.percent').text(mainArr[index].prof);
         $('.message>p').text(mainArr[index].about);
       }
+
+      /* ----------------------------------scroll------------------------------- */
+      var section = $("section").position();
+      var article = $("article").position();
+      var flag = true;
+      
+
+      $(window).scroll(function(){
+        if ($(window).scrollTop() > (section.top - 400)) {
+          
+          $('section .icon').fadeIn(0);
+          $('section .icon').animate({'left': '0'}, 1000);
+          $('section .item').fadeIn(0);
+          $('section .item').animate({'top': '0'}, 1000);
+        }
+
+        if ($(window).scrollTop() > (article.top + 200) && flag) {
+          console.log($(window).scrollTop(), article.top );
+          $('.article-2').animate({'top': '0'}, 500);
+            increment(850, '.num_1')();
+            increment(48, '.num_2')();
+            increment(21, '.num_3')();
+            increment(16, '.num_4')();
+          flag = false;
+          
+        }
+        
+      })
+      
+      function increment(num, elem) {
+        var count = 0;
+        var ink;
+        var time = 9000 / num;
+        function plus() {
+          $(elem).text(count);
+          ink = setTimeout(() => { plus();  }, time );
+          count++;
+          if (count > num) {
+            clearTimeout(ink);
+            return;
+          }
+        }
+        return plus;
+      }
+
+      
+      
 
 });
