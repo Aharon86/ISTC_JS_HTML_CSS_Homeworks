@@ -12,10 +12,10 @@ $(document).ready(function(){
     var middleWindow = '#item1';
     var par;
     var flag = true;
-    // var setI = setTimeout(() => { 
-    //   $(outsideWindow).css({"left": "100%"}); 
-    //   slide(1);
-    // }, 5000);
+    var setI = setTimeout(() => { 
+      $(outsideWindow).css({"left": "100%"}); 
+      slide(1);
+    }, 5000);
     
     function slide(dir = 1, who) {
       if (who == 'click') {

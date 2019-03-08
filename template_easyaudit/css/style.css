@@ -323,9 +323,9 @@ nav>.container>ul>li:last-child:hover>.login{
     text-align: center;
     padding: 5px 40px;
 }
-.slide_content *{
+/* .slide_content *{
     transition: all 0.5s ease;
-}
+} */
 .slide_content h2{
     font-size: 40px;
     font-weight: 100;
@@ -405,7 +405,7 @@ section .section_date .icon{
     display: none;
 }
 section .section_date img{
-    width: 45px;
+    width: 40px;
 }
 section .section_date>.item{
     top: 100px;
@@ -1146,6 +1146,10 @@ footer>.size>.container .follow a:hover{
         font-size: 14px;
     }
 
+    section .section_date>.item>h2{
+        font-size: 22px;
+    }
+
     #mainbottom .text{
         padding: 0 18px 20px;
     }
@@ -1289,6 +1293,19 @@ footer>.size>.container .follow a:hover{
         margin-bottom: 30px;
     }
 }
+
+@media only screen and (max-width: 768px) {
+    section .section_date{
+        width: 100%;
+        padding: 60px 20px;
+    }
+    section .section_date:not( :last-child ){
+        border-bottom: none;
+        border-bottom: 1px solid #ddd;
+    }
+   
+}
+
 @media only screen and (max-width: 650px) {
     #wrapper{
         margin-top: 40px;
