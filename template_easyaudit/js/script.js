@@ -1,4 +1,10 @@
 $(document).ready(function(){
+/* -----------------------------------menu------------------------ */
+  $('#drop-down').click(function() {
+    $('ul').toggle();
+  });
+
+
 
   $('.toggle_1').click(function () {
     $(".menu_1").fadeToggle(500);

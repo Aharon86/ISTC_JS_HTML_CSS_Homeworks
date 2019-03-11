@@ -88,6 +88,10 @@ nav>.container>.size>.logo{
     display: flex;
     justify-content: center;
 }
+
+#drop-down{
+    display: none;
+}
 nav>.container>.size>ul{
     width: 75%;
     font-size: 14px;
@@ -1289,11 +1293,31 @@ footer>.size>.container .follow a:hover{
 }
 
 @media only screen and (max-width: 768px) {
-    nav>.container>.size{
+    /* nav>.container>.size{
        justify-content: center;
-    }
+    } */
     nav>.container>.size>ul{
         display: none;
+        color: white;
+        position: absolute;
+        top: 95px;
+        background: #3a3c3e;
+    }
+    #drop-down{
+        display: block;
+        width: 40px;
+        height: 40px;
+        background:#3a3c3e;
+        border-radius: 5px;
+        padding: 4px 5px;
+    }
+    #drop-down>div>p{
+        width: 30px;
+        height: 4px;
+        background: white;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        border-radius: 4px;
     }
 
     section .section_date{
