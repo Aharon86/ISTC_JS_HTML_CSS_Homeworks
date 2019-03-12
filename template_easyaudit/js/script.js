@@ -1,7 +1,27 @@
 $(document).ready(function(){
 /* -----------------------------------menu------------------------ */
+  var toggle = true;
   $('#drop-down').click(function() {
-    $('ul').toggle();
+    if (toggle) {
+      $('#p1').css({transform: 'rotate(43deg)'});
+      $('#p2').css({display: 'none'});
+      $('#p3').css({transform: 'rotate(-43deg)'});
+
+      $('.drop-menu').addClass('menu1');
+      $('.menu1').animate({width: '380px', height: '306px'});
+      toggle = false;
+    }else{
+      $('#p1').css({transform: 'rotate(0deg)'});
+      $('#p2').css({display: 'block'});
+      $('#p3').css({transform: 'rotate(0deg)'});
+
+      $('.drop-menu').animate({width: '0px',height: '0px'}, function () {
+        $(".drop-menu").removeClass("menu1");
+      });
+      
+      toggle = true;
+    }
+    
   });
 
 

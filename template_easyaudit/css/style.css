@@ -92,7 +92,10 @@ nav>.container>.size>.logo{
 #drop-down{
     display: none;
 }
-nav>.container>.size>ul{
+.drop-menu{
+    display: none;
+}
+nav>.container>.size>#ul{
     width: 75%;
     font-size: 14px;
     font-weight: 600;
@@ -104,7 +107,7 @@ nav a{
     display: inline-block;
     transition: all .5s ease;
 }
-nav>.container>.size>ul>li:last-child a{
+nav>.container>.size>#ul>li:last-child>a{
     padding-left: 50px;
 }
 nav>.container>.size>ul>li:not(:last-child ) a{
@@ -113,7 +116,7 @@ nav>.container>.size>ul>li:not(:last-child ) a{
 nav a:hover{
     color: #37ca8a;
 }
-nav>.container>.size>ul>li:nth-child(3)>a::after{
+nav>.container>.size>#ul>li:nth-child(3)>a::after{
     content: '';
     width: 5px;
     height: 5px;
@@ -129,7 +132,7 @@ nav>.container>.size>ul>li:nth-child(3)>a::after{
 nav>.container>.size>ul>li:nth-child(3){
     position: relative;
 }
-nav>.container>.size>ul>li:nth-child(3)>ul{
+nav>.container>.size>#ul>li:nth-child(3)>ul{
     position: absolute;
     width: 150px;
     background: #3a3c3e;
@@ -1167,10 +1170,10 @@ footer>.size>.container .follow a:hover{
 
 
 @media only screen and (max-width: 800px) {
-    nav>.container>.size>ul>li:last-child a{
+    nav>.container>.size>#ul>li:last-child a{
         padding-left: 35px;
     }
-    nav>.container>.size>ul>li:not(:last-child ) a{
+    nav>.container>.size>#ul>li:not(:last-child ) a{
         padding: 0 10px;
     }
 
@@ -1273,6 +1276,9 @@ footer>.size>.container .follow a:hover{
         margin-bottom: 10px;
         margin-right: 0;
     }
+    #bottom .contact .container i {
+        padding-right: 0px;
+    }
    
     #bottom .recent_post img{
         width: 50%;
@@ -1296,13 +1302,27 @@ footer>.size>.container .follow a:hover{
     /* nav>.container>.size{
        justify-content: center;
     } */
-    nav>.container>.size>ul{
+    nav>.container>.size>ul#ul{
         display: none;
-        color: white;
-        position: absolute;
-        top: 95px;
-        background: #3a3c3e;
     }
+    
+    .menu1{
+        height: 0px;
+        /* overflow: hidden; */
+        display: block;
+        background: #3a3c3e;
+        position: absolute;
+        right: 0;
+        top: 80%;
+    }
+    .menu1>li{
+        text-align: center;
+        padding: 15px;
+    }
+    .menu1 a{
+        color: white;
+    }
+   
     #drop-down{
         display: block;
         width: 40px;
@@ -1310,14 +1330,27 @@ footer>.size>.container .follow a:hover{
         background:#3a3c3e;
         border-radius: 5px;
         padding: 4px 5px;
+        position: relative;
     }
-    #drop-down>div>p{
+    #drop-down>p{
         width: 30px;
         height: 4px;
         background: white;
-        margin-top: 5px;
-        margin-bottom: 5px;
         border-radius: 4px;
+        position: absolute;
+        transform-origin: left center;
+        transition: all .5s ease;
+    }
+    #drop-down>#p1{
+        top: 8px;
+        left: 8px;
+    }
+    #drop-down>#p2{
+        top: 18px;
+    }
+    #drop-down>#p3{
+        top: 28px;
+        left: 8px;
     }
 
     section .section_date{
