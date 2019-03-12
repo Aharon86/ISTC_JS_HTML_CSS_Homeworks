@@ -188,7 +188,7 @@ $(document).ready(function(){
       
 
       $(window).scroll(function(){
-        if ($(window).scrollTop() > (section.top - 400)) {
+        if ($(window).scrollTop() > (section.top - 600)) {
           
           $('section .icon').fadeIn(0);
           $('section .icon').animate({'left': '0'}, 1000);
@@ -196,7 +196,7 @@ $(document).ready(function(){
           $('section .item').animate({'top': '0'}, 1000);
         }
 
-        if ($(window).scrollTop() > (article.top + 200) && flag) {
+        if ($(window).scrollTop() > (article.top) && flag) {
           console.log($(window).scrollTop(), article.top );
           $('.article-2').animate({'top': '0'}, 500);
             increment(850, '.num_1')();
